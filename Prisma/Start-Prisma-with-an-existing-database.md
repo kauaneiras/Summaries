@@ -1,13 +1,7 @@
-# Interesting Questions
-
-- What is the Prisma tool used for and what problems does it help to solve?
-
-## Installation and Use of Prisma
+## Installation and Use of Prisma if you have an existing database
 To install the prism in your project, use the command:
 
 ``` npm i prisma ```
-
-### If you have an existing database
 
 *You need to have a database formed with some spreadsheets filled with data*
 
@@ -48,4 +42,21 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 ```
 
-7 - 
+7 - Install Prisma as a developer dependency
+
+```
+npm i -D @prisma/client
+```
+
+8 - Configure your database file with:
+
+```
+import pkg from '@prisma/client';
+
+const { PrismaClient } = pkg;
+const prisma = new PrismaClient();
+
+export default prisma;
+```
+
+**Prisma is already configured in your project. Now just import it into each file and use it when needed**
