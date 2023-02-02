@@ -1,0 +1,46 @@
+## installation
+
+```
+npm i -D jest ts-jest @types/jest
+```
+
+
+## Create Jest Config in project root 
+
+```
+jest.config.js
+```
+
+## Put in jest.config.js 
+
+```
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "node",
+  moduleDirectories: ["node_modules", "src"],
+  transform: {
+    ".+\\.ts$": "ts-jest",
+  },
+  testMatch: ["<rootDir>/tests/*.(test|spec).ts"],  //pasta onde vão estar os testes e o nome que os arquivos vão ter
+};
+
+```
+todos arquivos de teste vão precisar ter .test.ts ou .spec.ts
+
+
+## Rodar 
+
+```
+npx jest
+```
+
+
+## Cria a pastar test e dá o nome: [NOME].test.ts
+
+```
+npx jest
+```
+
+se o teste falhar, significa que reconheceu que tem o teste.
+
+
