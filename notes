@@ -1,0 +1,54 @@
+NOTE 1
+
+TypeScript
+nvm use v16.16.0
+nvm install  v14.21.2
+nvm use v14.21.2
+npm i -D typescript
+npm i -D @types/express
+colocar .ts no arquivo
+
+import { Request, Response } from express
+
+colocar nos parametros
+(req: Request, res: Response)
+
+tsconfig.json:
+"ts--node": {
+"esm": true
+}
+
+npm i -D ts-node
+
+excecutar:
+npx ts-node 'src/app.ts'
+npx nodemon 'src/app.ts' 
+
+
+
+
+NOTE 2
+
+sudo -i -u postgres
+\q --> sair do sql 
+\! alternar entre postgress e SO
+\h --> instruções, pode escrever uma especifica
+\? --> ajuda do sql
+\l --> listar bancos
+\c --> selecionar um banco
+\d --> mostra tabelas
+
+
+
+NOTE 3
+
+Node.js
+limpar server: fuser -k 5000/tcp
+
+npx nodemon index
+
+mongod --dbpath ~/.mongo
+
+new terminal:
+mongo
+use nomedomongo
